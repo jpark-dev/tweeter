@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  height: 400px;
+  background-color: #7fb9c7;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-freckles.png");
+  margin: 120px 0px 0px 0px;
+}
+
+header div {
+  text-align: center;
+
+}
