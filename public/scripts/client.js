@@ -81,7 +81,15 @@ $(() => {
   };
 
   // AJAX calls
-
+  
+  // get Ajax to load tweets and execute renderTweets()
+  const loadTweets = () => {
+    $.getJSON('/tweets')
+      .done(data => {
+        renderTweets(data);
+      });
+  };
+  
   // post Ajax call to send tweet to server with validation
   $('#form-button').click((event) => {
     event.preventDefault();
@@ -95,23 +103,13 @@ $(() => {
     } else {
       const $data = $('#tweet-form').serialize();
       $.post('/tweets', $data)
-        .done(data => {
-          console.log('data: ', data);
+        .done(() => {
+          loadTweets();
         });
-
     }
-
-
 
   });
 
-  // get Ajax to load tweets and execute renderTweets()
-  const loadTweets = () => {
-    $.getJSON('/tweets')
-      .done(data => {
-        renderTweets(data);
-      });
-  };
   loadTweets();
 
 });
