@@ -105,11 +105,17 @@ $(() => {
       $.post('/tweets', $data)
         .done(() => {
           loadTweets();
+          resetForm();
         });
     }
-
   });
 
+  const resetForm = () => {
+    $('#tweet-text')[0].value = '';
+    $('#counter')[0].value = 140;
+  }
+
+  // load Tweets when the document is ready
   loadTweets();
 
 });
