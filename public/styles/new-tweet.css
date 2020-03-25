@@ -1,7 +1,7 @@
 /* for new tweet container box */
 
 /* text area */
-#tweet-text {
+.new-tweet #tweet-text {
   border: none;
   border-bottom: 5px solid black;
   display: flex;
@@ -9,31 +9,26 @@
   background-color: transparent;
   margin: 10px 0px;
 }
-#tweet-text:focus {
+.new-tweet #tweet-text:focus {
   outline: none;
 }
-#tweet-button-area {
+
+.new-tweet #tweet-button-area {
   display: flex;
   justify-content: space-between;
 }
-
 .new-tweet label {
   font-size: 30px;
   font-weight: bolder;
 }
-
 .new-tweet button {
   background-color: #4056a1;
   color: #FFFFFF;
   font-family: Bungee;
   padding: 5px 10px;
 }
-
-.counter {
+.new-tweet .counter {
   font-family: Bungee;
+  display: flex;
+  align-items: center;
 }
-
-.red {
-  color: red;
-}
-

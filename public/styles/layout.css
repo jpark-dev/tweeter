@@ -32,4 +32,12 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* border control */
+.border-bottom {
+  border-bottom: 5px solid black;
+}
 
+/* color */
+.red {
+  color: red;
+}

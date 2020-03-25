@@ -17,7 +17,7 @@
 }
 
 /* header */
-.tweet-header {
+.old-tweet header {
   background-color: transparent;
   background-image: none;
   display: flex;
@@ -26,13 +26,13 @@
   margin: 0px;
   font-weight: bold;
 }
-.img-name {
+.old-tweet header .img-name {
   height: 64px;
   width: 200px;
   display: flex;
   align-items: center;
 }
-.tweeter-id {
+.old-tweet header .tweeter-id {
   color: #f4f1ec;
   text-shadow: none;
   padding: 0px 0px 5px 0px;
@@ -41,16 +41,10 @@
 }
 
 /* footer */
-.tweet-footer {
+.old-tweet footer {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
   font-size: 15px;
   margin: 10px;
-}
-
-
-
-.border-bottom {
-  border-bottom: 5px solid black;
 }
