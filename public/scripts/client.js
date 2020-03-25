@@ -6,36 +6,11 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
 
 $(() => {
   const $tweetsContainer = $('#tweets');
 
+  // loop through tweets and append to #tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       let $tweet = createTweetElement(tweet);
@@ -43,7 +18,7 @@ $(() => {
     }
   };
 
-
+  // create html element for each tweet in <article> tag
   const createTweetElement = (tweet) => {
     const $article = $('<article>').addClass('tweet');
 
@@ -105,19 +80,39 @@ $(() => {
     return $article;
   };
 
-  renderTweets(data);
-
   // AJAX calls
+
+  // post Ajax call to send tweet to server with validation
   $('#form-button').click((event) => {
     event.preventDefault();
 
-    const $data = $('#tweet-form').serialize();
-    $.post('/tweets', $data)
-      .done(data => {
-        console.log('data: ', data);
-      })
+    if ($('#counter')[0].value < 0 ) {
+      alert('You can only tweet up to 140 characters!!');
+
+    } else if ($('#tweet-text')[0].value === '' || $('#tweet-text')[0].value === null) {
+      alert('You must share something to tweet!');
+
+    } else {
+      const $data = $('#tweet-form').serialize();
+      $.post('/tweets', $data)
+        .done(data => {
+          console.log('data: ', data);
+        });
+
+    }
+
+
 
   });
+
+  // get Ajax to load tweets and execute renderTweets()
+  const loadTweets = () => {
+    $.getJSON('/tweets')
+      .done(data => {
+        renderTweets(data);
+      });
+  };
+  loadTweets();
 
 });
 
