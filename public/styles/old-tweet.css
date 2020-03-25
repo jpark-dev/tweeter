@@ -28,7 +28,6 @@
 }
 .old-tweet header .img-name {
   height: 64px;
-  width: 200px;
   display: flex;
   align-items: center;
 }

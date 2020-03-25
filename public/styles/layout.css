@@ -21,6 +21,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+body #title {
+  font-size: -webkit-xxx-large;
+}
+
 main {
   color: #545149;
   background-color: #f4f1ec;
@@ -32,7 +36,7 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /* border control */
+/* border control */
 .border-bottom {
   border-bottom: 5px solid black;
 }
