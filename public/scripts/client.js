@@ -31,67 +31,71 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 const renderTweets = (tweets) => {
   for (const tweet in tweets) {
     let $tweet = createTweetElement(tweets[tweet]);
     $('#tweets').append($tweet);
   }
-}
+};
 
 const createTweetElement = (tweet) => {
   const $article = $('<article>').addClass('tweet');
 
   // header
   const $header = $('<header>').addClass('tweeter');
+
   // header > left
-  const $left = $('<div>').addClass('left');
+  const $headerLeft = $('<div>').addClass('left');
   const $img = $('<img>').attr('src', `${tweet.user.avatars}`);
-  $left.append($img);
-  $left.append(`${tweet.user.name}`)
+  $headerLeft.append($img, `${tweet.user.name}`);
+
   // header > right
-  const $right = $('<div>').addClass('right');
-  $right.text(`${tweet.user.handle}`);
+  const $headerRight = $('<div>').addClass('right');
+  $headerRight.text(`${tweet.user.handle}`);
 
   // append all children to <header>
-  $header.append($left, $right);
+  $header.append($headerLeft, $headerRight);
 
 
   // tweet-text
   const $tweetText = $('<div>').addClass('tweet-text border-bottom');
-
   const $text = $('<h4>').text(`${tweet.content.text}`);
   $tweetText.append($text);
 
   // footer
   const $footer = $('<footer>');
 
-  // footer > div[0]
-  const $divDate = $('<div>');
+  // footer > div[0] > date
+  const $footerDate = $('<div>');
   const curTimeUnix = Date.now();
-  const timeElapsed = curTimeUnix - `${tweet.created_at}`;
-  const dateElapsed = (timeElapsed / 86400000).toFixed(0);
-  $divDate.text(`${dateElapsed} days ago`);
-
-  const $divImages = $('<div>');
+  const dateElapsed = ((curTimeUnix - `${tweet.created_at}`) / 86400000).toFixed(0);
+  $footerDate.text(`${dateElapsed} days ago`);
 
   // footer > div[1] > img
-  const $img1 = $('<img>').attr('src', 'images/icons8-repeat-20.png');
-  $img1.attr('alt', 'repeat image');
-  const $img2 = $('<img>').attr('src', 'images/icons8-heart-health-20.png');
-  $img2.attr('alt', 'heart image');
-  const $img3 = $('<img>').attr('src', 'images/icons8-empty-flag-20.png');
-  $img3.attr('alt', 'flag image');
-  $divImages.append($img1, $img2, $img3);
+  const $footerImages = $('<div>');
+
+  const $img1 = $('<img>').attr({
+    src: 'images/icons8-repeat-20.png',
+    alt: 'repeat image'
+  });
+  const $img2 = $('<img>').attr({
+    src: 'images/icons8-heart-health-20.png',
+    alt: 'heart image'
+  });
+  const $img3 = $('<img>').attr({
+    src: 'images/icons8-empty-flag-20.png',
+    alt: 'flag image'
+  });
+  $footerImages.append($img1, $img2, $img3);
 
   // append all children to <footer>
-  $footer.append($divDate, $divImages);
+  $footer.append($footerDate, $footerImages);
 
   // append all to <article>
   $article.append($header, $tweetText, $footer);
   return $article;
 };
-
 
 renderTweets(data);

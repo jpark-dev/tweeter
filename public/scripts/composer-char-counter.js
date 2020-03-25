@@ -1,4 +1,4 @@
-$(() => { 
+$(() => {
 
   $('#tweet-text').on('keyup', function() {
     this.parentNode[2].value = 140 - this.value.length;
