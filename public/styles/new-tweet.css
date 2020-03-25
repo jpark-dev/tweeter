@@ -1,3 +1,6 @@
+/* for new tweet container box */
+
+/* text area */
 #tweet-text {
   border: none;
   border-bottom: 5px solid black;
@@ -33,3 +36,4 @@
 .red {
   color: red;
 }
+

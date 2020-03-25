@@ -1,0 +1,55 @@
+/* styling for each old tweet */
+.tweet-header {
+  background-color: transparent;
+  background-image: none;
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+  margin: 20px 0px 0px 0px;
+  font-weight: bold;
+}
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px;
+}
+
+/* other tweets */
+.old-tweet {
+  border: 5px solid black;
+  margin: 50px 0px;
+  text-shadow: 0 0 2px #000;
+  padding: 10px;
+}
+.old-tweet:hover {
+  text-shadow: none;
+  box-shadow: 10px 10px lightsteelblue;
+
+}
+.old-tweet:hover .tweeter-id {
+  color : lightsteelblue;
+}
+
+.img-name {
+  /* justify-content: flex-end; */
+  height: 64px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.border-bottom {
+  border-bottom: 5px solid black;
+}
+
+
+
+.tweeter-id {
+  color: #f4f1ec;
+  text-shadow: none;
+  padding: 0px 0px 5px 0px;
+  display: flex;
+  align-items: center;
+}
