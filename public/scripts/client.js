@@ -95,13 +95,14 @@ $(() => {
     event.preventDefault();
 
     if ($('#counter')[0].value < 0 ) {
-      alert('You can only tweet up to 140 characters!!');
+      $('#error').text('You can only tweet up to 140 letters!!');
 
     } else if ($('#tweet-text')[0].value === '' || $('#tweet-text')[0].value === null) {
-      alert('You must share something to tweet!');
+      $('#error').text('You must share something to tweet!');
 
     } else {
       const $data = $('#tweet-form').serialize();
+      $('#error').empty();
       $.post('/tweets', $data)
         .done(() => {
           loadTweets();

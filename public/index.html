@@ -53,7 +53,10 @@
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text" rows="1"></textarea>
         <div id="tweet-button-area">
-          <button id="form-button" type="submit">Tweet</button>
+          <div>
+            <button id="form-button" type="submit">Tweet</button>
+            <span id="error"></span>
+          </div>
           <output id="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
