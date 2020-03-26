@@ -1,0 +1,97 @@
+/* styling for tweets */
+
+/* styling for new tweet compose area */
+.new-tweet {
+  display:none;
+}
+.new-tweet #tweet-form {
+  margin: 50px 0px;
+}
+.new-tweet #tweet-text {
+  border: none;
+  border-bottom: 5px solid black;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  margin: 10px 0px;
+}
+.new-tweet #tweet-text:focus {
+  outline: none;
+}
+.new-tweet #tweet-button-area {
+  display: flex;
+  justify-content: space-between;
+}
+.new-tweet label {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.new-tweet button {
+  background-color: #4056a1;
+  color: #FFFFFF;
+  font-family: Bungee;
+  padding: 5px 10px;
+}
+.new-tweet button:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+.new-tweet .counter {
+  font-family: Bungee;
+  display: flex;
+  align-items: center;
+}
+.new-tweet #error {
+  color: red;
+  font-weight: bold;
+}
+
+/* for other tweets */
+.tweet {
+  border: 5px solid black;
+  margin: 50px 0px;
+  text-shadow: 0 0 2px #000;
+  padding: 10px;
+}
+.tweet:hover {
+  text-shadow: none;
+  box-shadow: 10px 10px lightsteelblue;
+
+}
+.tweet:hover .right {
+  color : lightsteelblue;
+}
+
+/* header */
+.tweet header {
+  background-color: transparent;
+  background-image: none;
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+  margin: 0px;
+  font-weight: bold;
+}
+.tweet header .left {
+  display: flex;
+  align-items: center;
+}
+.tweet header .right {
+  color: #f4f1ec;
+  text-shadow: none;
+  padding: 0px 0px 5px 0px;
+  display: flex;
+  align-items: center;
+}
+
+/* footer */
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px;
+}
