@@ -81,7 +81,7 @@ $(() => {
   };
 
   // AJAX calls
-  
+
   // get Ajax to load tweets and execute renderTweets()
   const loadTweets = () => {
     $.getJSON('/tweets')
@@ -89,12 +89,12 @@ $(() => {
         renderTweets(data);
       });
   };
-  
+
   // post Ajax call to send tweet to server with validation
   $('#form-button').click((event) => {
     event.preventDefault();
 
-    if ($('#counter')[0].value < 0 ) {
+    if ($('#counter')[0].value < 0) {
       $('#error').text('You can only tweet up to 140 letters!!');
 
     } else if ($('#tweet-text')[0].value === '' || $('#tweet-text')[0].value === null) {
@@ -111,10 +111,19 @@ $(() => {
     }
   });
 
+  // reset all values in the form
   const resetForm = () => {
     $('#tweet-text')[0].value = '';
     $('#counter')[0].value = 140;
   }
+
+  // slide toggle of new tweet section
+  $('#compose').click(() => {
+    console.log('clicked');
+    $('.new-tweet').slideToggle();
+    $('#tweet-text').focus();
+  })
+
 
   // load Tweets when the document is ready
   loadTweets();
