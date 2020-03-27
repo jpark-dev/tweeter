@@ -1,0 +1,126 @@
+/* styling for tweets */
+
+/* styling for new tweet compose area */
+.new-tweet {
+  display:none;
+  
+  #tweet-form {
+    margin: 50px 0px;
+  }
+  #tweet-text {
+    border: none;
+    border-bottom: 5px solid black;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    margin: 10px 0px;
+  }
+  #tweet-text:focus {
+    outline: none;
+  }
+  #tweet-button-area {
+    display: flex;
+    justify-content: space-between;
+  }
+  label {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  button {
+    background-color: #4056a1;
+    color: #FFFFFF;
+    font-family: Bungee;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  .counter {
+    font-family: Bungee;
+    display: flex;
+    align-items: center;
+  }
+  #error {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+/* for other tweets */
+.tweet {
+  border: 5px solid black;
+  margin: 50px 0px;
+  text-shadow: 0 0 2px #000;
+  padding: 10px;
+  word-wrap: break-word;
+  
+  :hover {
+    text-shadow: none;
+    box-shadow: 10px 10px lightsteelblue;  
+  }
+  :hover .right {
+    color : lightsteelblue;
+  }
+
+  /* header */
+  header {
+    background-color: transparent;
+    background-image: none;
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    margin: 0px;
+    font-weight: bold;
+  }
+  header .left {
+    display: flex;
+    align-items: center;
+  }
+  header .right {
+    color: #f4f1ec;
+    text-shadow: none;
+    padding: 0px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+    width: 100%;
+  }
+
+}
+
+/* responsive */
+
+/* for desktop */
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 25%;
+    float: left;
+    margin-top: 170px;
+  }
+  main {
+    width: 70%;
+    margin-top: 120px;
+    float: right;
+  }
+  footer {
+    clear: both;
+  }
+  body {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

@@ -1,8 +1,7 @@
 /* styling for tweets */
-
 /* styling for new tweet compose area */
 .new-tweet {
-  display:none;
+  display: none;
 }
 .new-tweet #tweet-form {
   margin: 50px 0px;
@@ -36,7 +35,6 @@
 .new-tweet button:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
-
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
 }
@@ -57,17 +55,16 @@
   text-shadow: 0 0 2px #000;
   padding: 10px;
   word-wrap: break-word;
+  /* header */
+  /* footer */
 }
-.tweet:hover {
+.tweet :hover {
   text-shadow: none;
   box-shadow: 10px 10px lightsteelblue;
-
 }
-.tweet:hover .right {
-  color : lightsteelblue;
+.tweet :hover .right {
+  color: lightsteelblue;
 }
-
-/* header */
 .tweet header {
   background-color: transparent;
   background-image: none;
@@ -88,8 +85,6 @@
   display: flex;
   align-items: center;
 }
-
-/* footer */
 .tweet footer {
   display: flex;
   justify-content: space-between;
@@ -99,30 +94,29 @@
   width: 100%;
 }
 
-
 /* responsive */
-
 /* for desktop */
-
 @media only screen and (min-width: 1024px) {
   .header {
     width: 25%;
     float: left;
     margin-top: 170px;
   }
+
   main {
-    width: 60%;
+    width: 70%;
     margin-top: 120px;
     float: right;
   }
-  /* body {
-    display: flex;
-  } */
+
   footer {
     clear: both;
   }
+
   body {
     max-width: 1024px;
     margin: 0 auto;
   }
 }
+
+/*# sourceMappingURL=tweets.css.map */

@@ -1,12 +1,15 @@
+$header-bg-color: #7fb9c7;
+
 header {
   width: 100%;
   height: 400px;
-  background-color: #7fb9c7;
+  background-color: $header-bg-color;
   background-image: url("https://www.transparenttextures.com/patterns/subtle-freckles.png");
   margin: 120px 0px 0px 0px;
-}
-header div {
-  text-align: center;
+  
+  div {
+    text-align: center;
+  
+  }
 }
 
-/*# sourceMappingURL=header.css.map */

@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,25 +13,34 @@ html {
 /*
  * Global layout stuff
  */
+
+// variables
+
+$main-font-color: #545149;
+$main-bg-color: #f4f1ec;
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $main-font-color;
+  background-color: $main-bg-color;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-}
-body #title {
-  font-size: -webkit-xxx-large;
+  
+  #title {
+    font-size: -webkit-xxx-large;
+  }
 }
 
 main {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $main-font-color;
+  background-color: $main-bg-color;
   padding: 0% 5%;
+
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 /* border control */
 .border-bottom {
   border-bottom: 5px solid black;
@@ -42,5 +50,3 @@ main {
 .red {
   color: red;
 }
-
-/*# sourceMappingURL=layout.css.map */
