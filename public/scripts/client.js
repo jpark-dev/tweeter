@@ -51,7 +51,7 @@ $(() => {
     const $footerDate = $('<div>');
     const curTimeUnix = Date.now();
     const dateElapsed = ((curTimeUnix - tweet.created_at) / 86400000).toFixed(0);
-    
+  
     $footerDate.text(`${dateElapsed} days ago`);
 
     // footer > div[1] > img
@@ -124,7 +124,6 @@ $(() => {
 
   // slide toggle of new tweet section
   $('#compose').click(() => {
-    console.log('clicked');
     $('.new-tweet').slideToggle();
     $('#tweet-text').focus();
   })
