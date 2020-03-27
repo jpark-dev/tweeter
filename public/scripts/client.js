@@ -90,6 +90,7 @@ $(() => {
   const loadTweets = () => {
     $.getJSON('/tweets')
       .done(data => {
+        $('#tweets').empty();
         renderTweets(data);
       });
   };
@@ -109,7 +110,6 @@ $(() => {
       $('#error').empty();
       $.post('/tweets', $data)
         .done(() => {
-          $('#tweets').empty();
           loadTweets();
           resetForm();
         });
