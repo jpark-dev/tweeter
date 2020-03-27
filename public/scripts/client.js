@@ -74,7 +74,7 @@ $(() => {
     });
     $footerImages.append($img1, $img2, $img3);
     $footerImages
-      .addClass('footer-images hidden')
+      .addClass('footer-images hidden');
 
     // append all children to <footer>
     $footer.append($footerDate, $footerImages);
@@ -120,14 +120,13 @@ $(() => {
   const resetForm = () => {
     $('#tweet-text')[0].value = '';
     $('#counter')[0].value = 140;
-  }
+  };
 
   // slide toggle of new tweet section
   $('#compose').click(() => {
     $('.new-tweet').slideToggle();
     $('#tweet-text').focus();
-  })
-
+  });
 
   // load Tweets when the document is ready
   loadTweets();
