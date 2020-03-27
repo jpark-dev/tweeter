@@ -12,7 +12,8 @@ $(() => {
 
   // loop through tweets and append to #tweets
   const renderTweets = (tweets) => {
-    for (const tweet of tweets) {
+    const newestFirst = tweets.reverse();
+    for (const tweet of newestFirst) {
       let $tweet = createTweetElement(tweet);
       $tweetsContainer.append($tweet);
     }
@@ -50,6 +51,7 @@ $(() => {
     const $footerDate = $('<div>');
     const curTimeUnix = Date.now();
     const dateElapsed = ((curTimeUnix - tweet.created_at) / 86400000).toFixed(0);
+    
     $footerDate.text(`${dateElapsed} days ago`);
 
     // moment.js as date js libary :)
@@ -105,6 +107,7 @@ $(() => {
       $('#error').empty();
       $.post('/tweets', $data)
         .done(() => {
+          $('#tweets').empty();
           loadTweets();
           resetForm();
         });
