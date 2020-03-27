@@ -43,4 +43,8 @@ main {
   color: red;
 }
 
+.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=layout.css.map */

@@ -2,8 +2,7 @@
 
 /* styling for new tweet compose area */
 .new-tweet {
-  display:none;
-  
+
   #tweet-form {
     margin: 50px 0px;
   }
@@ -65,10 +64,15 @@
   &:hover {
     text-shadow: none;
     box-shadow: 10px 10px lightsteelblue;  
+    
+    .right {
+      color: lightsteelblue;
+    }
+    .footer-images {
+      display: inline-flex;
+    }
   }
-  &:hover .right {
-    color : lightsteelblue;
-  }
+
 
   /* header */
   header {
@@ -99,7 +103,10 @@
     font-weight: bold;
     font-size: 15px;
     margin: 10px;
-    width: 100%;
+    // width: 100%;
+    img {
+      margin-left: 5px;
+    }
   }
 
 }

@@ -1,8 +1,5 @@
 /* styling for tweets */
 /* styling for new tweet compose area */
-.new-tweet {
-  display: none;
-}
 .new-tweet #tweet-form {
   margin: 50px 0px;
 }
@@ -66,6 +63,9 @@
 .tweet:hover .right {
   color: lightsteelblue;
 }
+.tweet:hover .footer-images {
+  display: inline-flex;
+}
 .tweet header {
   background-color: transparent;
   background-image: none;
@@ -92,7 +92,9 @@
   font-weight: bold;
   font-size: 15px;
   margin: 10px;
-  width: 100%;
+}
+.tweet footer img {
+  margin-left: 5px;
 }
 
 /* responsive */

@@ -54,25 +54,27 @@ $(() => {
     
     $footerDate.text(`${dateElapsed} days ago`);
 
-    // moment.js as date js libary :)
-    // fontAwesome :)
-
     // footer > div[1] > img
     const $footerImages = $('<div>');
 
     const $img1 = $('<img>').attr({
-      src: 'images/icons8-repeat-20.png',
-      alt: 'repeat image'
+      src: 'images/icons8-empty-flag-20.png',
+      alt: 'Flag',
+      height: '17px'
     });
     const $img2 = $('<img>').attr({
-      src: 'images/icons8-heart-health-20.png',
-      alt: 'heart image'
+      src: 'images/icons8-repeat-20.png',
+      alt: 'Re-tweet',
+      height: '17px'
     });
     const $img3 = $('<img>').attr({
-      src: 'images/icons8-empty-flag-20.png',
-      alt: 'flag image'
+      src: 'images/icons8-heart-health-20.png',
+      alt: 'Like',
+      height: '17px'
     });
     $footerImages.append($img1, $img2, $img3);
+    $footerImages
+      .addClass('footer-images hidden')
 
     // append all children to <footer>
     $footer.append($footerDate, $footerImages);
