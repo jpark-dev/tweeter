@@ -13,6 +13,7 @@
   width: 100%;
   background-color: transparent;
   margin: 10px 0px;
+  resize: none;
 }
 .new-tweet #tweet-text:focus {
   outline: none;
@@ -58,11 +59,11 @@
   /* header */
   /* footer */
 }
-.tweet :hover {
+.tweet:hover {
   text-shadow: none;
   box-shadow: 10px 10px lightsteelblue;
 }
-.tweet :hover .right {
+.tweet:hover .right {
   color: lightsteelblue;
 }
 .tweet header {
